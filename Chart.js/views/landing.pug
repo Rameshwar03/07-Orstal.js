@@ -1,0 +1,37 @@
+extends base
+
+block content 
+  .w-full
+    nav.bg-white.shadow-lg
+      .items-center.justify-between.py-2.px-8(class='md:flex md:px-12')
+        .flex.justify-between.items-center
+          .text-2xl.font-bold.text-gray-800(class='md:text-3xl')
+            a(href='/') Groww
+          .(class='md:hidden')
+            button.block.text-gray-800(type='button' class='hover:text-gray-700 focus:text-gray-700 focus:outline-none')
+              svg.h-6.w-6.fill-current(viewbox='0 0 24 24')
+                path.hidden(d='M16.24 14.83a1 1 0 0 1-1.41 1.41L12 13.41l-2.83 2.83a1 1 0 0 1-1.41-1.41L10.59 12 7.76 9.17a1 1 0 0 1 1.41-1.41L12 10.59l2.83-2.83a1 1 0 0 1 1.41 1.41L13.41 12l2.83 2.83z')
+                path(d='M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z')
+        .flex.flex-col.hidden.-mx-2(class='md:flex-row md:block')
+          a.text-gray-800.rounded.py-2.px-2(href='/' class='hover:bg-gray-900 hover:text-gray-100 hover:font-medium md:mx-2') Home
+          a.text-gray-800.rounded.py-2.px-2(href='/' class='hover:bg-gray-900 hover:text-gray-100 hover:font-medium md:mx-2') About
+          a.text-gray-800.rounded.py-2.px-2(href='/' class='hover:bg-gray-900 hover:text-gray-100 hover:font-medium md:mx-2') Contact
+    .flex.bg-white(style='height: 600px')
+      .flex.items-center.text-center.px-8(class='lg:text-left md:px-12 lg:w-1/2')
+        div
+          h2.text-3xl.font-semibold.text-gray-800(class='md:text-4xl')
+            | Post your Business idea with
+            span.text-indigo-600 Groww
+          p.mt-2.text-sm.text-gray-500(class='md:text-base')
+            | Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            | Blanditiis commodi cum cupiditate ducimus, fugit harum id
+            | necessitatibus odio quam quasi, quibusdam rem tempora voluptates.
+            | Cumque debitis dignissimos id quam vel!
+          .flex.justify-center.mt-6(class='lg:justify-start')
+            a.px-4.py-3.bg-gray-900.text-gray-200.text-xs.font-semibold.rounded(class='hover:bg-gray-800' href='/login') Login
+            a.mx-4.px-4.py-3.bg-gray-300.text-gray-900.text-xs.font-semibold.rounded(class='hover:bg-gray-400' href='/signup') Signup
+      .hidden(class='lg:block lg:w-1/2' style='clip-path: polygon(10% 0, 100% 0%, 100% 100%, 0 100%)')
+        .h-full.object-cover(style='\
+        background-image: url(https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80);\
+        ')
+          .h-full.bg-black.opacity-25

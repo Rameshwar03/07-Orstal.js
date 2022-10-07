@@ -1,0 +1,35 @@
+extends base
+
+block content
+  form.form
+  .login.bg-gray-900
+    .py-6
+      .flex.bg-white.rounded-lg.shadow-lg.overflow-hidden.mx-auto.max-w-sm(class='lg:max-w-4xl')
+        .hidden.bg-cover(class='lg:block lg:w-1/2' style="\
+        background-image: url('https://images.unsplash.com/photo-1546514714-df0ccc50d7bf?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=667&q=80');\
+        ")
+        .w-full.p-8(class='lg:w-1/2')
+          h2.text-2xl.font-semibold.text-gray-700.text-center
+            | Brand
+          p.text-xl.text-gray-600.text-center Welcome back!
+          .mt-4.flex.items-center.justify-between
+            span.border-b(class='w-1/5 lg:w-1/4')
+            a.text-xs.text-center.text-gray-500.uppercase(href='#') login with email
+            span.border-b(class='w-1/5 lg:w-1/4')
+          .mt-4
+            label.block.text-gray-700.text-sm.font-bold.mb-2 Email Address
+            input#email.bg-gray-200.text-gray-700.border.border-gray-300.rounded.py-2.px-4.block.w-full.appearance-none(class='focus:outline-none focus:shadow-outline' type='email' name='email')
+          .mt-4
+            .flex.justify-between
+              label.block.text-gray-700.text-sm.font-bold.mb-2 Password
+              a.text-xs.text-gray-500(href='#') Forget Password?
+            input#password.bg-gray-200.text-gray-700.border.border-gray-300.rounded.py-2.px-4.block.w-full.appearance-none(class='focus:outline-none focus:shadow-outline' type='password' name='password')
+          .mt-8
+            button.bg-gray-700.text-white.font-bold.py-2.px-4.w-full.rounded(class='hover:bg-gray-600 form--login')
+              | Login
+          .mt-4.flex.items-center.justify-between
+            span.border-b(class='w-1/5 md:w-1/4')
+            a.text-xs.text-gray-500.uppercase() or sign up
+            span.border-b(class='w-1/5 md:w-1/4')
+  script(src='https://unpkg.com/axios/dist/axios.min.js')                
+  script(src='/JS/login.js') 

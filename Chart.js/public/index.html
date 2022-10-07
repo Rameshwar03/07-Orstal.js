@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="./style.css" rel="stylesheet" />
+    <title>Orstal</title>
+  </head>
+  <body>
+    <!-- -------------- -->
+    <!-- component -->
+    <div class="w-full">
+      <nav class="bg-white shadow-lg">
+        <div class="md:flex items-center justify-between py-2 px-8 md:px-12">
+          <div class="flex justify-between items-center">
+            <div class="text-2xl font-bold text-gray-800 md:text-3xl">
+              <a href="#">Orstal.Js</a>
+            </div>
+            <div class="md:hidden">
+              <button
+                type="button"
+                class="block text-gray-800 hover:text-gray-700 focus:text-gray-700 focus:outline-none"
+              >
+                <svg class="h-6 w-6 fill-current" viewBox="0 0 24 24">
+                  <path
+                    class="hidden"
+                    d="M16.24 14.83a1 1 0 0 1-1.41 1.41L12 13.41l-2.83 2.83a1 1 0 0 1-1.41-1.41L10.59 12 7.76 9.17a1 1 0 0 1 1.41-1.41L12 10.59l2.83-2.83a1 1 0 0 1 1.41 1.41L13.41 12l2.83 2.83z"
+                  />
+                  <path
+                    d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="flex flex-col md:flex-row hidden md:block -mx-2">
+            <a
+              href="./userDashboard.html"
+              class="text-gray-800 rounded hover:bg-gray-900 hover:text-gray-100 hover:font-medium py-2 px-2 md:mx-2"
+              >Home</a
+            >
+            
+            <a
+              href="#"
+              class="text-gray-800 rounded hover:bg-gray-900 hover:text-gray-100 hover:font-medium py-2 px-2 md:mx-2"
+              >Product</a
+              >
+              <a
+              href="#"
+              class="text-gray-800 rounded hover:bg-gray-900 hover:text-gray-100 hover:font-medium py-2 px-2 md:mx-2"
+              >Pricing</a
+              >
+              <a
+              href="#"
+              class="text-gray-800 rounded hover:bg-gray-900 hover:text-gray-100 hover:font-medium py-2 px-2 md:mx-2"
+              >Enterprise</a
+              >
+
+              <a
+              href="#"
+              class="text-gray-800 rounded hover:bg-gray-900 hover:text-gray-100 hover:font-medium py-2 px-2 md:mx-2"
+              >Services</a
+              >
+      
+            <a
+              href="#"
+              class="text-gray-800 rounded hover:bg-gray-900 hover:text-gray-100 hover:font-medium py-2 px-2 md:mx-2"
+              >Contact Sales</a
+            >
+          </div>
+        </div>
+      </nav>
+      <div class="flex bg-white" style="height: 600px">
+        <div
+          class="flex items-center text-center lg:text-left px-8 md:px-12 lg:w-1/2"
+        >
+          <div>
+            <h1 class="text-4xl font-bold text-gray-800 md:text-4xl">
+              Never lose client info again.Build the perfect CRM in 
+              <span class="text-indigo-600">Orstal.Js,</span>
+              for free.
+            </h1>
+            <p class="mt-2 text-sm text-gray-500 md:text-base">
+              Orstal.Js makes it easy to organise and grow your <br>
+              customer relationships with tracking,data <br>
+              visualization, email, and more--all in one place.
+            </p>
+            <div class="flex justify-center lg:justify-start mt-6">
+              <a
+                class="px-4 py-3 bg-gray-900 text-gray-200 text-xs font-semibold rounded hover:bg-gray-800"
+                href="/login"
+                >Login</a
+              >
+              <a
+                class="mx-4 px-4 py-3 bg-gray-300 text-gray-900 text-xs font-semibold rounded hover:bg-gray-400"
+                href="/signup"
+                >Signup</a
+              >
+            </div>
+          </div>
+        </div>
+        <div
+          class="hidden lg:block lg:w-1/2"
+          style="clip-path: polygon(10% 0, 100% 0%, 100% 100%, 0 100%)"
+        >
+          <div
+            class="h-full object-cover"
+            style="
+              background-image: url(https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80);
+            "
+          >
+            <div class="h-full bg-black opacity-25"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="bg-white dark:bg-gray-800">
+      <div class="container px-6 py-8 mx-auto">
+          <div class="flex flex-col items-center justify-center space-y-8 lg:-mx-4 lg:flex-row lg:items-stretch lg:space-y-0">
+              <div class="flex flex-col w-full max-w-sm p-8 space-y-8 text-center bg-white border-2 border-gray-200 rounded-lg lg:mx-4 dark:bg-gray-800 dark:border-gray-700">
+                  <div class="flex-shrink-0">
+                      <h2 class="inline-flex items-center justify-center px-2 font-bold tracking-tight text-blue-400 uppercase rounded-lg bg-gray-50 dark:bg-gray-700">
+                          Casual
+                      </h2>
+                  </div>
+                  <div class="flex-shrink-0">
+                      <span
+                          class="pt-2 text-4xl font-bold text-black-800 uppercase dark:text-black-100"
+                      >
+                          Free
+                      </span>
+                  </div>
+                  <ul class="flex-1 space-y-4">
+                      <li class="text-black-500 dark:text-black-400">
+                          Up to 5 projects
+                      </li>
+                      <li class="text-black-500 dark:text-black-400">
+                          Up to 10 collaborators
+                      </li>
+                      <li class="text-black-500 dark:text-gray-400">
+                          2Gb of storage
+                      </li>
+                  </ul>
+    
+                  <button
+                      class="inline-flex items-center justify-center px-4 py-2 font-semibold text-white uppercase transition-colors bg-blue-500 rounded-lg hover:bg-blue-700 focus:outline-none"
+                  >
+                      Start free
+                  </button>
+              </div>
+    
+              <div class="flex flex-col w-full max-w-sm p-8 space-y-8 text-center bg-white border-2 border-gray-200 rounded-lg lg:mx-4 dark:bg-gray-800 dark:border-gray-700">
+                  <div class="flex-shrink-0">
+                      <h2
+                          class="inline-flex items-center justify-center px-2 font-bold tracking-tight text-blue-400 uppercase rounded-lg bg-gray-50 dark:bg-gray-700"
+                      >
+                          Profesional
+                      </h2>
+                  </div>
+                  <div class="flex-shrink-0">
+                      <span
+                          class="pt-2 text-4xl font-bold text-black-800 uppercase dark:text-black-100"
+                      >
+                          $24.90
+                      </span>
+                      <span class="text-black-500 dark:text-black-400">
+                          /month
+                      </span>
+                  </div>
+                  <ul class="flex-1 space-y-4">
+                      <li class="text-black-500 dark:text-black-400">
+                          Up to 10 projects
+                      </li>
+                      <li class="text-black-500 dark:text-black-400">
+                          Up to 20 collaborators
+                      </li>
+                      <li class="text-black-500 dark:teblack-400">
+                          10Gb of storage
+                      </li>
+                      <li class="text-black-500 dark:text-black-400">
+                          Real-time collaborations
+                      </li>
+                  </ul>
+    
+                  <button
+                      class="inline-flex items-center justify-center px-4 py-2 font-semibold text-white uppercase transition-colors bg-blue-500 rounded-lg hover:bg-blue-700 focus:outline-none"
+                  >
+                      Start free trial
+                  </button>
+              </div>
+    
+              <div class="flex flex-col w-full max-w-sm p-8 space-y-8 text-center bg-white border-2 border-gray-200 rounded-lg lg:mx-4 dark:bg-gray-800 dark:border-gray-700">
+                  <div class="flex-shrink-0">
+                      <h2
+                          class="inline-flex items-center justify-center px-2 font-bold tracking-tight text-blue-400 uppercase rounded-lg bg-gray-50 dark:bg-gray-700"
+                      >
+                          Expert
+                      </h2>
+                  </div>
+                  <div class="flex-shrink-0">
+                      <span
+                          class="pt-2 text-4xl font-bold text-blueblack-800 uppercase dark:text-black-100"
+                      >
+                          $49.90
+                      </span>
+                      <span class="text-black-500 dark:text-black-400">
+                          /month
+                      </span>
+                  </div>
+                  <ul class="flex-1 space-y-4">
+                      <li class="text-black-500 dark:text-black-400">
+                          Unlimited projects
+                      </li>
+                      <li class="text-black-500 dark:text-black-400">
+                          Unlimited collaborators
+                      </li>
+                      <li class="text-black-500 dark:text-black-400">
+                          Unlimited storage
+                      </li>
+                      <li class="text-black-500 dark:text-black-400">
+                          Real-time collaborations
+                      </li>
+                      <li class="text-black-500 dark:text-black-400">
+                          24x7 Support
+                      </li>
+                  </ul>
+    
+                  <button
+                      class="inline-flex items-center justify-center px-4 py-2 font-semibold text-white uppercase transition-colors bg-blue-500 rounded-lg hover:bg-blue-700 focus:outline-none"
+                  >
+                      Start free trial
+                  </button>
+              </div>
+          </div>
+      </div>
+    <!-- component -->
+<link rel="stylesheet" href="https://demos.creative-tim.com/notus-js/assets/styles/tailwind.css">
+<link rel="stylesheet" href="https://demos.creative-tim.com/notus-js/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css">
+
+
+<section class="relative  bg-blueGray-50">
+<div class="relative pt-16 pb-32 flex content-center items-center justify-center min-h-screen-75">
+        <div class="absolute top-0 w-full h-full bg-center bg-cover" style="
+            background-image: url('https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1267&amp;q=80');
+          ">
+          <span id="blackOverlay" class="w-full h-full absolute opacity-75 bg-black"></span>
+        </div>
+        <div class="container relative mx-auto">
+          <div class="items-center flex flex-wrap">
+            <div class="w-full lg:w-6/12 px-4 ml-auto mr-auto text-center">
+              <div class="pr-12">
+                <h1 class="text-white font-semibold text-5xl">
+                  Your story starts with us.
+                </h1>
+                <p class="mt-4 text-lg text-blueGray-200">
+                  This is a simple example of a Landing Page you can build using
+                  Notus JS. It features multiple CSS components based on the
+                  Tailwind CSS design system.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="top-auto bottom-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden h-70-px" style="transform: translateZ(0px)">
+          <svg class="absolute bottom-0 overflow-hidden" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" version="1.1" viewBox="0 0 2560 100" x="0" y="0">
+            <polygon class="text-blueGray-200 fill-current" points="2560 0 2560 100 0 100"></polygon>
+          </svg>
+        </div>
+      </div>
+      <section class="pb-10 bg-blueGray-200 -mt-24">
+        <div class="container mx-auto px-4">
+          <div class="flex flex-wrap">
+            <div class="lg:pt-12 pt-6 w-full md:w-4/12 px-4 text-center">
+              <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
+                <div class="px-4 py-5 flex-auto">
+                  <div class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-red-400">
+                    <i class="fas fa-award"></i>
+                  </div>
+                  <h6 class="text-xl font-semibold">Awarded Agency</h6>
+                  <p class="mt-2 mb-4 text-blueGray-500">
+                    Divide details about your product or agency work into parts.
+                    A paragraph describing a feature will be enough.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="w-full md:w-4/12 px-4 text-center">
+              <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
+                <div class="px-4 py-5 flex-auto">
+                  <div class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-lightBlue-400">
+                    <i class="fas fa-retweet"></i>
+                  </div>
+                  <h6 class="text-xl font-semibold">Free Revisions</h6>
+                  <p class="mt-2 mb-4 text-blueGray-500">
+                    Keep you user engaged by providing meaningful information.
+                    Remember that by this time, the user is curious.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="pt-6 w-full md:w-4/12 px-4 text-center">
+              <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
+                <div class="px-4 py-5 flex-auto">
+                  <div class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-emerald-400">
+                    <i class="fas fa-fingerprint"></i>
+                  </div>
+                  <h6 class="text-xl font-semibold">Verified Company</h6>
+                  <p class="mt-2 mb-4 text-blueGray-500">
+                    Write a few lines about each one. A paragraph describing a
+                    feature will be enough. Keep you user engaged!
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+           <footer class="relative  pt-8 pb-6 mt-1">
+  <div class="container mx-auto px-4">
+    <div class="flex flex-wrap items-center md:justify-between justify-center">
+      <div class="w-full md:w-6/12 px-4 mx-auto text-center">
+        <div class="text-sm text-blueGray-500 font-semibold py-1">
+          Made with <a href="https://www.creative-tim.com/product/notus-js" class="text-blueGray-500 hover:text-gray-800" target="_blank">Orstal.Js</a> by <a href="https://www.creative-tim.com" class="text-blueGray-500 hover:text-blueGray-800" target="_blank"> Creative Tim</a>.
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- component -->
+
+</div>
+</footer>
+      </section>
+      </section>
+  </body>
+</html>

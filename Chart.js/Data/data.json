@@ -1,0 +1,46 @@
+[
+  {
+    "employee insert data coment line": 1
+  },
+  {
+    "empid": 11,
+    "lastname": "Harijan",
+    "firstname": "Ritik",
+    "title": "Junior Marketing Manager",
+    "titleofcourtesy": "Mr",
+    "birthdate": "1998-12-22",
+    "hiredate": "2005-04-04",
+    "address": "7890 - 20th Ave. E., Apt. 2A",
+    "city": "Boisar",
+    "region": "WA",
+    "postalcode": "1002",
+    "country": "INDIA",
+    "phone": "9922544441",
+    "mgrid": 1
+  },
+  {
+    "customer insert data comment line": 2
+  },
+  {
+    "custid": 92,
+    "companyname": "Customer NRZBB",
+    "contactname": "Allen, Michael",
+    "contacttitle": "Sales Representative",
+    "address": "Obere Str. 0123",
+    "city": "Berlin",
+    "region": null,
+    "postalcode": "10092",
+    "country": "Germany",
+    "phone": "030-3456789",
+    "fax": "030-0123456"
+  },
+  {
+    "USER insert data comment line": 3
+  },
+  {
+    "userid": 1,
+    "userName": "hritik1511",
+    "userPassword": "hehehehe",
+    "email": "hehe@gmail.com"
+  }
+]

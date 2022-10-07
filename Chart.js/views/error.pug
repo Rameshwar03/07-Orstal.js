@@ -1,0 +1,12 @@
+extends base
+
+block content 
+  main.h-screen.w-full.flex.flex-col.justify-center.items-center(class='bg-[#1A2238]')
+    h1.text-9xl.font-extrabold.text-white.tracking-widest 404
+    .px-2.text-sm.rounded.rotate-12.absolute(class='bg-[#FF6A3D]')
+      | Page Not Found
+    button.mt-5
+      a.relative.inline-block.text-sm.font-medium.group(class='text-[#FF6A3D] active:text-orange-500 focus:outline-none focus:ring')
+        span.absolute.inset-0.transition-transform(class='translate-x-0.5 translate-y-0.5 bg-[#FF6A3D] group-hover:translate-y-0 group-hover:translate-x-0')
+        span.relative.block.px-8.py-3.border.border-current(class='bg-[#1A2238]')
+          router-link(to='/') Go Home
