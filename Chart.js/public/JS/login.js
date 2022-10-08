@@ -22,7 +22,7 @@ const login = async (email, password) => {
       url: "/login",
       data: {
         email: email,
-        userPassword: password,
+        password: password,
       },
     });
 

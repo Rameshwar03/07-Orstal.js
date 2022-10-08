@@ -82,13 +82,13 @@ exports.login = catchAsync(async (req, res, next) => {
     return next(new AppError("Incorrect provided email or password", 400));
   }
 
-  let Query = "Select email,userPassword from users where users.email = ? ";
+  let Query = "Select email,password from users where users.email = ? ";
 
   con.query(Query, [[user.email]], (err, data) => {
     if (err) {
       return next(new AppError(err.message, 400));
     } else {
-      if (bcrypt.compare(user.userPassword, data[0].userPassword)) {
+      if (bcrypt.compare(user.password, data[0].password)) {
         createSendToken(user, 200, res);
       } else {
         return next(new AppError("Error Occurred", 400));

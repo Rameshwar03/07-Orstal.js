@@ -1,0 +1,27 @@
+extends base
+block content
+
+    script(src='./JS/emailCont.js')
+    script(type='text/javascript' src='https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js')
+    script(type='text/javascript').
+      (function () {
+      emailjs.init("34XnN20F7wU5UvsxG");
+      })();
+    .flex.min-h-screen.items-center.justify-start.bg-white
+      .mx-auto.w-full.max-w-lg
+        h1.text-4xl.font-medium Contact us
+        p.mt-3 Email us at help@domain.com or message us here:
+        form.mt-10
+          input(type='hidden' name='access_key' value='YOUR_ACCESS_KEY_HERE')
+          .grid.gap-6(class='sm:grid-cols-2')
+            .relative.z-0
+              input#emailName.peer.block.w-full.appearance-none.border-0.border-b.border-gray-500.bg-transparent.px-0.text-sm.text-gray-900(type='text' class='py-2.5 focus:border-blue-600 focus:outline-none focus:ring-0' placeholder=' ')
+              label.absolute.top-3.-z-10.-translate-y-6.scale-75.transform.text-sm.text-gray-500.duration-300(class='origin-[0] peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:left-0 peer-focus:-translate-y-6 peer-focus:scale-75 peer-focus:text-blue-600 peer-focus:dark:text-blue-500') Your name
+            .relative.z-0
+              input#emailtext.peer.block.w-full.appearance-none.border-0.border-b.border-gray-500.bg-transparent.px-0.text-sm.text-gray-900(type='text' class='py-2.5 focus:border-blue-600 focus:outline-none focus:ring-0' placeholder=' ')
+              label.absolute.top-3.-z-10.-translate-y-6.scale-75.transform.text-sm.text-gray-500.duration-300(class='origin-[0] peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:left-0 peer-focus:-translate-y-6 peer-focus:scale-75 peer-focus:text-blue-600 peer-focus:dark:text-blue-500') Your email
+            .relative.z-0.col-span-2
+              textarea#emailMessage.peer.block.w-full.appearance-none.border-0.border-b.border-gray-500.bg-transparent.px-0.text-sm.text-gray-900(rows='5' class='py-2.5 focus:border-blue-600 focus:outline-none focus:ring-0' placeholder=' ')
+              label.absolute.top-3.-z-10.-translate-y-6.scale-75.transform.text-sm.text-gray-500.duration-300(class='origin-[0] peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:left-0 peer-focus:-translate-y-6 peer-focus:scale-75 peer-focus:text-blue-600 peer-focus:dark:text-blue-500') Your message
+          button.mt-5.rounded-md.bg-black.px-10.py-2.text-white(type='submit' onclick='sendMail()')
+            | Send Message

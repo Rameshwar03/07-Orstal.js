@@ -10,33 +10,6 @@ const companyRouter = require("./routes/companyRouter");
 const userRouter = require("./routes/userRoutes");
 const viewRouter = require("./routes/viewRoutes");
 
-// const nodemailer = require('nodemailer');
-
-// let transporter = nodemailer.createTransport({
-//   service: " ",
-//   auth: {
-//     user: "ritik.203178101@vcet.edu.in",
-//     pass: "Hello@123",
-//   },
-//   tls: {
-//     rejectUnauthorized: false,
-
-//   }
-// })
-// let mailOption = {
-//   from: "ritik.203178101@vcet.edu.in",
-//   to: `{users.email}`,
-//   subject: "Testing",
-//   text: " Email recarding the bussions "
-// }
-
-// transporter.sendMail(mailOption, function (err, success) {
-//   if (err) {
-//     console.log(err);
-//   } else {
-//     console.log('Email sent successfully');
-//   }
-// })
 
 // setting views
 app.set("view engine", "pug");

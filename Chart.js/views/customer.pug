@@ -1,54 +1,53 @@
-
-extends base
-
-block content
-.flex.items-center.justify-center.p-12
-  .mx-auto.w-full(class='max-w-[550px]')
-    form(action='https://formbold.com/s/FORM_ID' method='POST')
-      span.flex.items-center.justify-center.p-12.font-bold
-        | Customer information
-      .mb-5
-        label.mb-3.block.text-base.font-medium(for='name' class='text-[#07074D]')
-          | Companyname
-        input#name.w-full.rounded-md.border.bg-white.py-3.px-6.text-base.font-medium.outline-none(type='text' name='name' placeholder='Full Name' class='border-[#e0e0e0] text-[#6B7280] focus:border-[#6A64F1] focus:shadow-md')
-      .mb-5
-        label.mb-3.block.text-base.font-medium(for='email' class='text-[#07074D]')
-          | Contactname
-        input#email.w-full.rounded-md.border.bg-white.py-3.px-6.text-base.font-medium.outline-none(type='email' name='email' placeholder='example@domain.com' class='border-[#e0e0e0] text-[#6B7280] focus:border-[#6A64F1] focus:shadow-md')
-      .mb-5
-        label.mb-3.block.text-base.font-medium(for='subject' class='text-[#07074D]')
-          | Contacttitle
-        input#subject.w-full.rounded-md.border.bg-white.py-3.px-6.text-base.font-medium.outline-none(type='text' name='subject' placeholder='Enter your subject' class='border-[#e0e0e0] text-[#6B7280] focus:border-[#6A64F1] focus:shadow-md')
-      .mb-5
-        label.mb-3.block.text-base.font-medium(for='message' class='text-[#07074D]')
-          | Address
-        textarea#message.w-full.resize-none.rounded-md.border.bg-white.py-3.px-6.text-base.font-medium.outline-none(rows='4' name='message' placeholder='Type your message' class='border-[#e0e0e0] text-[#6B7280] focus:border-[#6A64F1] focus:shadow-md')
-      .mb-5
-        label.mb-3.block.text-base.font-medium(for='subject' class='text-[#07074D]')
-          | City
-        input#subject.w-full.rounded-md.border.bg-white.py-3.px-6.text-base.font-medium.outline-none(type='text' name='subject' placeholder='Enter your subject' class='border-[#e0e0e0] text-[#6B7280] focus:border-[#6A64F1] focus:shadow-md')
-      .mb-5
-        label.mb-3.block.text-base.font-medium(for='subject' class='text-[#07074D]')
-          | Region
-        input#subject.w-full.rounded-md.border.bg-white.py-3.px-6.text-base.font-medium.outline-none(type='text' name='subject' placeholder='Enter your subject' class='border-[#e0e0e0] text-[#6B7280] focus:border-[#6A64F1] focus:shadow-md')
-      .mb-5
-        label.mb-3.block.text-base.font-medium(for='subject' class='text-[#07074D]')
-          | PostalCode
-        input#subject.w-full.rounded-md.border.bg-white.py-3.px-6.text-base.font-medium.outline-none(type='text' name='subject' placeholder='Enter your subject' class='border-[#e0e0e0] text-[#6B7280] focus:border-[#6A64F1] focus:shadow-md')
-      .mb-5
-        label.mb-3.block.text-base.font-medium(for='subject' class='text-[#07074D]')
-          | Country
-        input#subject.w-full.rounded-md.border.bg-white.py-3.px-6.text-base.font-medium.outline-none(type='text' name='subject' placeholder='Enter your subject' class='border-[#e0e0e0] text-[#6B7280] focus:border-[#6A64F1] focus:shadow-md')
-      .mb-5
-        label.mb-3.block.text-base.font-medium(for='subject' class='text-[#07074D]')
-          | Phone
-        input#subject.w-full.rounded-md.border.bg-white.py-3.px-6.text-base.font-medium.outline-none(type='text' name='subject' placeholder='Enter your subject' class='border-[#e0e0e0] text-[#6B7280] focus:border-[#6A64F1] focus:shadow-md')
-      .mb-5
-        label.mb-3.block.text-base.font-medium(for='subject' class='text-[#07074D]')
-          | Fax
-        input#subject.w-full.rounded-md.border.bg-white.py-3.px-6.text-base.font-medium.outline-none(type='text' name='subject' placeholder='Enter your subject' class='border-[#e0e0e0] text-[#6B7280] focus:border-[#6A64F1] focus:shadow-md')
-      div
-        button.rounded-md.py-3.px-8.text-base.font-semibold.text-white.outline-none(class='hover:shadow-form bg-[#6A64F1] form--customer')
-          | Submit
-script(src='/JS/axios.js')           
-script(src='/JS/coustomer.js')           
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  script(src='https://cdn.tailwindcss.com')
+  link(rel='stylesheet' href='https://cdn.tailgrids.com/tailgrids-fallback.css')
+  script(defer='' src='https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js')
+  title Customer
+section.bg-white
+  .container
+    .flex.flex-wrap
+      .w-full
+        .max-w-full.overflow-x-auto
+          table.table-auto.w-full
+            thead
+              tr
+                // 
+                th.text-lg.font-semibold.text-white.px-3.border-l.border-transparent
+                th.text-lg.font-semibold.text-white.px-3
+            
+                  // productid":1,"productname":"Product HHYDP","supplierid":1,"categoryid":1,"unitprice":18,"discontinued":
+                  section.bg-white.py-20(class='lg:py-[120px]')
+                    .container
+                      .flex.flex-wrap.-mx-4
+                        .w-full.px-4
+                          .max-w-full.overflow-x-auto
+                            table.table-auto.w-full
+                              thead
+                                tr.bg-primary.text-center
+                                  th.text-lg.font-semibold.text-white.py-4.px-3.border-l.border-transparent(class='w-1/6 min-w-[160px] lg:py-7 lg:px-4')
+                                    | Id
+                                  th.text-lg.font-semibold.text-white.py-4.px-3(class='w-1/6 min-w-[160px] lg:py-7 lg:px-4')
+                                    | Company name
+                                  th.text-lg.font-semibold.text-white.py-4.px-3(class='w-1/6 min-w-[160px] lg:py-7 lg:px-4')
+                                    | Contact Name
+                                  th.text-lg.font-semibold.text-white.py-4.px-3(class='w-1/6 min-w-[160px] lg:py-7 lg:px-4')
+                                    | city
+                                  th.text-lg.font-semibold.text-white.py-4.px-3(class='w-1/6 min-w-[160px] lg:py-7 lg:px-4')
+                                    | country
+                                  th.text-lg.font-semibold.text-white.py-4.px-3.border-r.border-transparent(class='w-1/6 min-w-[160px] lg:py-7 lg:px-4')
+                                    | fax
+                              tbody
+                              for trdata  in data 
+                                tr
+                                  td.text-center.text-dark.font-medium.text-base.py-5.px-2.border-b.border-l(class='bg-[#F3F6FF] border-[#E8E8E8]')=trdata.custid 
+                                  td.text-center.text-dark.font-medium.text-base.py-5.px-2.bg-white.border-b(class='border-[#E8E8E8]')=trdata.companyname
+                                  td.text-center.text-dark.font-medium.text-base.py-5.px-2.border-b(class='bg-[#F3F6FF] border-[#E8E8E8]')=trdata.contactname 
+                                  td.text-center.text-dark.font-medium.text-base.py-5.px-2.bg-white.border-b(class='border-[#E8E8E8]')=trdata.city
+                                  td.text-center.text-dark.font-medium.text-base.py-5.px-2.border-b(class='bg-[#F3F6FF] border-[#E8E8E8]')=trdata.country
+                                  td.text-center.text-dark.font-medium.text-base.py-5.px-2.bg-white.border-b.border-r(class='border-[#E8E8E8]')=trdata.fax 
+                                    
+              

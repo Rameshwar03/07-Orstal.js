@@ -1,6 +1,6 @@
 const dotenv = require("dotenv");
 const mysql = require("mysql");
-const port = 3200;
+const port = 3000;
 
 dotenv.config({ path: "config.env" });
 const app = require("./app");

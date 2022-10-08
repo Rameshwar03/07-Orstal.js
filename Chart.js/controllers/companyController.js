@@ -13,8 +13,9 @@ var con = mysql.createConnection({
 
 exports.getChart = catchAsync(async (req, res, next) => {
   res
-    .status(200)
-    .sendFile(path.join(__dirname, "../public", "userDashboard.html"));
+    .status(200).render('dash', {
+      title: 'Dashboard'
+    })
 });
 
 exports.postEmployee = catchAsync(async (req, res, next) => {
@@ -64,7 +65,7 @@ exports.postCustomer = catchAsync(async (req, res, next) => {
 // GET ALL EMPLOYEE
 exports.getEmployee = catchAsync(async (req, res, next) => {
   // Rights own only by HR of company
-  var Query = "Select * from employee";
+  var Query = "Select empid,firstname,lastname,title from employee";
   con.query(Query, (err, data) => {
     if (err) {
       let error = new AppError("Employee data not found in databae!");
@@ -85,7 +86,7 @@ exports.getCustomer = catchAsync(async (req, res, next) => {
   // Rights own only by Employee of company
   //
   var Query =
-    "SELECT * FROM customer";
+    "SELECT custid,companyname,contactname,city,country,fax FROM customer";
 
   var id = await req.body.empid;
 
@@ -99,12 +100,9 @@ exports.getCustomer = catchAsync(async (req, res, next) => {
         message: "Customer not found",
       });
     } else {
-      res.status(200).json({
-        status: "success",
-        data: {
-          data,
-        },
-      });
+      res.status(200).render('customer', {
+        title: 'Customer', data
+      })
     }
   });
 });
@@ -112,18 +110,29 @@ exports.getCustomer = catchAsync(async (req, res, next) => {
 exports.postCustomer = catchAsync(async (req, res, next) => {
   let Query = "INSERT INTO Customer(custid, companyname, contactname, contacttitle, address, city, region, postalcode, country, phone, fax) VALUES ?"
   data = req.body;
-  console.log(data);
   res.status(200).json({
     status: 'success',
-    data: {
-      data
-    }
+    message: "Inserted"
   })
 })
 
 exports.getPieChart = catchAsync(async (req, res, next) => {
   let Query =
     "Select productid,custid,empid FROM orderdetail INNER JOIN salesorder WHERE orderdetail.orderid = salesorder.orderid ORDER BY empid ASC";
+  con.query(Query, (err, data) => {
+    if (err) return next(new AppError("Data not found", 404));
+    else {
+      res.status(200).json({
+        status: "success",
+        data,
+      });
+    }
+  });
+});
+
+exports.getbarChart = catchAsync(async (req, res, next) => {
+  let Query =
+    "SELECT category.categoryid,category.categoryname ,product.productid FROM category Inner JOIN product WHERE category.categoryid=product.categoryid ORDER BY categoryid ASC;";
   con.query(Query, (err, data) => {
     if (err) return next(new AppError("Data not found", 404));
     else {

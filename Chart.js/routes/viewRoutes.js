@@ -12,6 +12,12 @@ router.get("/hehe", View.landingPage);
 router.get("/login", View.loginPage);
 router.get("/signup", View.signUpPage);
 router.post("/post", User.protect, View.posts);
+
+router.get("/email", View.getEmailPage);
+
+// router.get("/customer", View.customerPage);
+
+router.get("/product", View.product);
 // router.post("/updatePosts",User.protect,View.updatePosts);
 
 module.exports = router;

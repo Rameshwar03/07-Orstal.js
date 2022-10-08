@@ -1,0 +1,39 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  script(src='https://cdn.tailwindcss.com')
+  link(rel='stylesheet' href='https://cdn.tailgrids.com/tailgrids-fallback.css')
+  script(defer='' src='https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js')
+  title Document
+section.bg-white.py-20(class='lg:py-[120px]')
+  .container
+    .flex.flex-wrap.-mx-4
+      .w-full.px-4
+        .max-w-full.overflow-x-auto
+          table.table-auto.w-full
+            thead
+              tr.bg-primary.text-center
+                // 
+                th.text-lg.font-semibold.text-white.py-4.px-3.border-l.border-transparent(class='w-1/6 min-w-[160px] lg:py-7 lg:px-4')
+                  | Id
+                th.text-lg.font-semibold.text-white.py-4.px-3(class='w-1/6 min-w-[160px] lg:py-7 lg:px-4')
+                  | Product Name
+                th.text-lg.font-semibold.text-white.py-4.px-3(class='w-1/6 min-w-[160px] lg:py-7 lg:px-4')
+                  | Supplier Id
+                th.text-lg.font-semibold.text-white.py-4.px-3(class='w-1/6 min-w-[160px] lg:py-7 lg:px-4')
+                  | Category Id
+                th.text-lg.font-semibold.text-white.py-4.px-3(class='w-1/6 min-w-[160px] lg:py-7 lg:px-4')
+                  | Price
+                th.text-lg.font-semibold.text-white.py-4.px-3.border-r.border-transparent(class='w-1/6 min-w-[160px] lg:py-7 lg:px-4')
+                  | Discontinued
+            tbody
+            for trdata in data
+              tr
+                td.text-center.text-dark.font-medium.text-base.py-5.px-2.border-b.border-l(class='bg-[#F3F6FF] border-[#E8E8E8]')=trdata.productid
+                td.text-center.text-dark.font-medium.text-base.py-5.px-2.bg-white.border-b(class='border-[#E8E8E8]')=trdata.productname
+                td.text-center.text-dark.font-medium.text-base.py-5.px-2.border-b(class='bg-[#F3F6FF] border-[#E8E8E8]')=trdata.supplierid
+                td.text-center.text-dark.font-medium.text-base.py-5.px-2.bg-white.border-b(class='border-[#E8E8E8]')=trdata.categoryid
+                td.text-center.text-dark.font-medium.text-base.py-5.px-2.border-b(class='bg-[#F3F6FF] border-[#E8E8E8]')=trdata.unitprice
+                td.text-center.text-dark.font-medium.text-base.py-5.px-2.bg-white.border-b.border-r(class='border-[#E8E8E8]')=trdata.discontinued
