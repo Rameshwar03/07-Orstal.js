@@ -5,7 +5,7 @@ const view = require("../controllers/viewsController");
 const router = express.Router();
 
 // view Rendering below
-router.get("/dashboard", companyCont.getChart);
+// router.get("/dash", companyCont.getChart);
 
 // company CRUD below
 router

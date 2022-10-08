@@ -1,5 +1,5 @@
 /* eslint-disable */
-const logoutForm = document.querySelector(".form--logout");
+let logoutForm = document.querySelector(".form--logout");
 console.log("logout pressed");
 // ALERT
 const hideAlert = () => {
@@ -23,7 +23,7 @@ const logout = async () => {
     });
     console.log(res);
     if ((res.data.status = "success"))
-      location.assign("http://localhost:3200/");
+      location.assign("http://localhost:3000/");
   } catch (err) {
     console.log(err.response);
     showAlert("error", "Error logging out! Try again.");

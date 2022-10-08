@@ -12,10 +12,9 @@ var con = mysql.createConnection({
 });
 
 exports.getChart = catchAsync(async (req, res, next) => {
-  res
-    .status(200).render('dash', {
-      title: 'Dashboard'
-    })
+  res.status(200).render('dash', {
+    title: 'Dashboard'
+  })
 });
 
 exports.postEmployee = catchAsync(async (req, res, next) => {
